@@ -39,10 +39,11 @@ PRODUCT_PACKAGES += \
     choice_fn \
     power_test \
     offmode_charging \
+    offmode_charging_res_images \
+    offmode_charging_warn_res_images \
     detect_key \
+    chargeled \
     init.recovery.qcom.rc
-# Recovery offmode charging images
-$(call inherit-product, device/htc/t6-common/recovery/res/offmode_charging_images.mk)
 
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
@@ -143,7 +144,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 # NFCEE access control
