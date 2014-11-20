@@ -398,6 +398,11 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio audio gps
 
+service qseecomd /system/bin/qseecomd
+    class main
+    user system
+    group system drm
+
 service setup_fs /system/bin/setup_fs mmcblk0p41
     class core
     user root
@@ -466,9 +471,10 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     oneshot
 # End WiFi
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service fm_dl /system/bin/setprop hw.fm.init 1
+    class late_start
     user root
-    group system qcom_oncrpc
+    group system fm_radio
     disabled
     oneshot
 

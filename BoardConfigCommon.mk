@@ -40,10 +40,12 @@ TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 # Audio
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
 BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recognition use case
+BOARD_USES_SEPERATED_FM := true # use distinct fm use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
 BOARD_AUDIO_AMPLIFIER := device/htc/t6-common/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
+QCOM_FM_ENABLED := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -127,6 +129,7 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
+TARGET_RECOVERY_DEVICE_DIRS += device/htc/t6-common
 
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode

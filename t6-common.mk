@@ -34,21 +34,10 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-PRODUCT_PACKAGES += \
-    lpm.rc \
-    choice_fn \
-    power_test \
-    offmode_charging \
-    offmode_charging_res_images \
-    offmode_charging_warn_res_images \
-    detect_key \
-    chargeled \
-    init.recovery.qcom.rc
 
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
-    $(LOCAL_PATH)/configs/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh \
     $(LOCAL_PATH)/configs/init.crda.sh:/system/etc/init.crda.sh
 
 # QC thermald config
@@ -89,8 +78,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    libaudioamp \
-    qcom.fmradio
+    libaudioamp
 
 # Camera
 PRODUCT_PACKAGES += \
